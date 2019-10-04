@@ -123,6 +123,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'PortfolioProject/static/')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #Saving images in this folder
+STATIC_URL = '/experience/'
+
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #Saving images in this folder
 MEDIA_URL =  '/media/' #if someone wants to choose from the previous image, where they can do it from
