@@ -134,3 +134,8 @@ STATIC_URL = '/experience/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #Saving images in this folder
 MEDIA_URL =  '/media/' #if someone wants to choose from the previous image, where they can do it from
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
